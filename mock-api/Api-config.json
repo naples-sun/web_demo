@@ -1,0 +1,70 @@
+[
+  {
+    "description":"这是Mock接口的Demo",
+    "request":{
+      "uri":"/GetDemo",
+      "method":"get"
+    },
+
+    "response":{
+      "text":"This is Get request"
+    }
+  },
+    {
+      "description":"这是Mock接口的Demo",
+      "request":{
+        "uri":"/GetDemo1",
+        "method":"get",
+        "queries":{
+          "name":"Andy",
+          "age":"18"
+        }
+      },
+
+      "response":{
+        "text":"This is Get request name=Anndy"
+      }
+  },
+    {
+      "description": "这是Mock接口的Demo",
+      "request": {
+        "uri": "/PostDemo",
+        "method": "Post",
+        "forms": {
+          "name": "Andy",
+          "age": "18"
+        }
+      },
+      "response": {
+        "text": "This is Post request"
+      }
+    },
+    {
+      "description":"这是Mock接口,带Header和参数的Demo",
+      "request":{
+        "uri":"/PostDemo/withHeaders",
+        "method":"post",
+        "headers":{
+          "context-Type":"AABB",
+          "Agent":"CCDD"
+        },
+        "cookies":{
+          "SessionID":"11AABB22"
+        },
+        "forms":{
+          "name":"Anndy",
+          "age":"18"
+        }
+      },
+
+      "response":{
+        "json":{
+          "Code":"Success",
+          "Data":{
+            "Link":"./locatin/xxx.jpg",
+            "Message":"Mock模拟的带Header,参数信息的POST请求"
+          }
+        }
+      }
+    }
+]
